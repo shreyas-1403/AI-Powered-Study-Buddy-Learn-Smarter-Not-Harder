@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# AI-Powered-Study-Buddy-Learn-Smarter-Not-Harder
 
 ## Project info
 
