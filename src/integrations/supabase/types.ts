@@ -17,20 +17,26 @@ export type Database = {
       flashcards: {
         Row: {
           answer: string | null
+          created_at: string
+          difficulty: string | null
           id: string
-          "note-id": string
+          note_id: string
           question: string
         }
         Insert: {
           answer?: string | null
+          created_at?: string
+          difficulty?: string | null
           id?: string
-          "note-id"?: string
+          note_id?: string
           question: string
         }
         Update: {
           answer?: string | null
+          created_at?: string
+          difficulty?: string | null
           id?: string
-          "note-id"?: string
+          note_id?: string
           question?: string
         }
         Relationships: []
@@ -38,18 +44,57 @@ export type Database = {
       notes: {
         Row: {
           content: string | null
+          created_at: string
           id: string
-          "user-id": string
+          title: string
+          user_id: string
         }
         Insert: {
           content?: string | null
+          created_at?: string
           id?: string
-          "user-id"?: string
+          title?: string
+          user_id?: string
         }
         Update: {
           content?: string | null
+          created_at?: string
           id?: string
-          "user-id"?: string
+          title?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          credits_remaining: number
+          full_name: string | null
+          id: string
+          subscription_tier: string
+          updated_at: string
+          uploads_this_month: number
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          credits_remaining?: number
+          full_name?: string | null
+          id?: string
+          subscription_tier?: string
+          updated_at?: string
+          uploads_this_month?: number
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          credits_remaining?: number
+          full_name?: string | null
+          id?: string
+          subscription_tier?: string
+          updated_at?: string
+          uploads_this_month?: number
+          user_id?: string
         }
         Relationships: []
       }
