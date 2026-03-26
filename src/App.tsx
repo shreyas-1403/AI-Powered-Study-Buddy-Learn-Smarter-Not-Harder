@@ -7,6 +7,9 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
+import Upload from "./pages/Upload";
+import Flashcards from "./pages/Flashcards";
+import Quiz from "./pages/Quiz";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,7 +25,9 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/upload" element={<Upload />} />
+            <Route path="/flashcards" element={<Flashcards />} />
+            <Route path="/quiz" element={<Quiz />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
